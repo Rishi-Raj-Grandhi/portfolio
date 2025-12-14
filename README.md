@@ -1,17 +1,18 @@
-# Retro Music-Reactive 3D Portfolio
+# Retro Game Portfolio
 
-A retro-inspired, music-reactive 3D portfolio prototype built with React + Vite + Three.js.
+A retro-inspired portfolio website with classic 8-bit game aesthetics, built with React + Vite + Three.js. Features a clean, pixelated design with subtle 3D background animations.
 
 ## Features
 
-- 🎨 Retro pixel/arcade game aesthetic
-- 🎧 Random music player with track switching
-- 🌌 Global music-reactive particle background
-- 🔮 Three scroll-activated 3D visualizers
-- 🧱 JSON-driven projects section
-- 💬 Contact form with EmailJS
+- 🎨 Retro 8-bit game aesthetic with solid colors
+- 🧭 Fixed navigation header with smooth scroll
+- 🌌 Subtle 3D background animations (particles and geometric shapes)
+- 📋 About section with education, experience, skills, and achievements
+- 🧱 JSON-driven projects section with modal details
+- 💬 Contact form with EmailJS integration
 - 🔗 Social links section
-- 🖼️ Pixelated portrait hero section
+- 🖼️ Hero section with portrait and side images
+- 📱 Fully responsive design
 
 ## Setup
 
@@ -20,26 +21,26 @@ A retro-inspired, music-reactive 3D portfolio prototype built with React + Vite 
 npm install
 ```
 
-2. Add music files to `/public/music/`:
-   - Place your MP3 files in the `public/music/` directory
-   - Name them: `track1.mp3`, `track2.mp3`, `track3.mp3`
-   - Or update the track list in `src/components/AudioProvider.jsx`
+2. Add your images to `/public/`:
+   - Place your portrait image at `/public/me.jpg`
+   - Place left decoration image at `/public/left.jpg`
+   - Place right decoration image at `/public/right.jpg`
+   - Images will be automatically styled with pixel effects
 
-3. Add your portrait image:
-   - Place your image at `/public/me.jpg`
-   - The image will be automatically pixelated with CSS
-
-4. Configure EmailJS (optional):
+3. Configure EmailJS (optional):
    - Sign up at [EmailJS](https://www.emailjs.com/)
    - Update the EmailJS configuration in `src/components/ContactForm.jsx`:
      - Replace `YOUR_PUBLIC_KEY` with your EmailJS public key
      - Replace `YOUR_SERVICE_ID` with your service ID
      - Replace `YOUR_TEMPLATE_ID` with your template ID
 
-5. Update social links:
-   - Edit the URLs in `src/components/SocialLinks.jsx`
+4. Update your information:
+   - Edit `src/data/projects.json` to add your projects
+   - Update `src/components/About.jsx` with your details
+   - Update `src/components/SocialLinks.jsx` with your social media links
+   - Update `src/App.jsx` hero section with your name and title
 
-6. Run the development server:
+5. Run the development server:
 ```bash
 npm run dev
 ```
@@ -49,33 +50,32 @@ npm run dev
 ```
 src/
   components/
-    AudioProvider.jsx      # Global audio context and analyzer
-    MusicPlayer.jsx        # Play/pause button
-    ToggleNextTrack.jsx    # Next track button
-    BackgroundParticles.jsx # Music-reactive particle background
-    ContactForm.jsx        # EmailJS contact form
-    SocialLinks.jsx        # Social media links
-    ProjectGrid.jsx        # Projects grid display
-    ProjectModal.jsx       # Project detail modal
-  visualizers/
-    SphereVisualizer.jsx   # Retro neon sphere
-    ParticleVisualizer.jsx # Pixel cloud visualizer
-    BarsVisualizer.jsx     # Equalizer grid
+    About.jsx                 # About section with education, experience, skills
+    BackgroundAnimation.jsx   # 3D background particles and shapes
+    ContactForm.jsx           # EmailJS contact form
+    Navigation.jsx            # Fixed header navigation menu
+    ProjectGrid.jsx           # Projects grid display
+    ProjectModal.jsx          # Project detail modal
+    SocialLinks.jsx           # Social media links
   data/
-    projects.json          # Project data
-  App.jsx                  # Main app component
-  main.jsx                 # Entry point
-  styles.css              # Retro pixel styles
+    projects.json             # Project data (JSON)
+  App.jsx                     # Main app component
+  main.jsx                    # Entry point
+  styles.css                  # Retro game styles
 ```
 
 ## Color Palette
 
-- Neon Green: `#6CFF47`
-- Retro Cyan: `#32FFE8`
-- Magenta: `#FF40C1`
-- Pixel Yellow: `#FFD447`
-- Off-white: `#F5F5F5`
-- Dark Background: `#0A0A0A`
+The portfolio uses a classic retro game color scheme with solid colors:
+
+- Primary Green: `#4A7C59` (muted green)
+- Secondary Blue: `#5B7FA6` (muted blue)
+- Accent Red: `#B85450` (muted red)
+- Accent Yellow: `#D4A574` (tan/yellow)
+- Accent Brown: `#8B6F47` (brown)
+- Off-white: `#E8E8E8`
+- Dark Background: `#1A1A1A`
+- Pure Black: `#000000`
 
 ## Technologies
 
@@ -83,14 +83,28 @@ src/
 - Vite
 - Three.js
 - @react-three/fiber
-- @react-three/drei
 - @emailjs/browser
 
 ## Browser Compatibility
 
-Requires modern browsers with Web Audio API and WebGL support.
+Requires modern browsers with WebGL support for the 3D background animations.
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
 
 ## License
 
 MIT
-
