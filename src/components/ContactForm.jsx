@@ -10,7 +10,7 @@ const ContactForm = () => {
   const [status, setStatus] = useState(null)
 
   useEffect(() => {
-    emailjs.init('YOUR_PUBLIC_KEY') // Replace with your EmailJS public key
+    emailjs.init('YzMTvrjVm2bIKU9gh') // Replace with your EmailJS public key
   }, [])
 
   const handleChange = (e) => {
@@ -26,8 +26,8 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your service ID
-        'YOUR_TEMPLATE_ID', // Replace with your template ID
+        'service_8lv4irw', // Replace with your service ID
+        'template_9xc57nf', // Replace with your template ID
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -44,7 +44,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <h2 className="section-title">CONTACT</h2>
       <form onSubmit={handleSubmit} className="contact-form pixel-panel">
         <div className="form-group">

@@ -1,12 +1,12 @@
 const SocialLinks = () => {
   const socials = [
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile', icon: '💼' },
-    { name: 'Twitter', url: 'https://twitter.com/yourhandle', icon: '🐦' },
-    { name: 'Instagram', url: 'https://instagram.com/yourhandle', icon: '📷' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/rishi-raj-grandhi', icon: '💼' },
+    { name: 'GitHub', url: 'https://github.com/Rishi-Raj-Grandhi', icon: '💻' },
+    { name: 'Email', url: 'mailto:rishi.phani.grandhi@gmail.com', icon: '📧' },
   ]
 
   return (
-    <section className="social-section">
+    <section id="connect" className="social-section">
       <h2 className="section-title">CONNECT</h2>
       <div className="social-links">
         {socials.map((social, idx) => (

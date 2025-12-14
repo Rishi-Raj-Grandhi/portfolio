@@ -1,110 +1,101 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { AudioProvider } from './components/AudioProvider'
-import MusicPlayer from './components/MusicPlayer'
-import ToggleNextTrack from './components/ToggleNextTrack'
-import BackgroundParticles from './components/BackgroundParticles'
-import SphereVisualizer from './visualizers/SphereVisualizer'
-import ParticleVisualizer from './visualizers/ParticleVisualizer'
-import BarsVisualizer from './visualizers/BarsVisualizer'
+import Navigation from './components/Navigation'
+import BackgroundAnimation from './components/BackgroundAnimation'
+import About from './components/About'
 import ProjectGrid from './components/ProjectGrid'
 import ContactForm from './components/ContactForm'
 import SocialLinks from './components/SocialLinks'
 
 function App() {
   return (
-    <AudioProvider>
-      <div className="app">
-        {/* CRT Scanline Overlay */}
-        <div className="crt-overlay"></div>
-        
-        {/* Background Canvas */}
-        <div className="background-canvas">
-          <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-            <Suspense fallback={null}>
-              <BackgroundParticles />
-            </Suspense>
-          </Canvas>
-        </div>
+    <div className="app">
+      {/* CRT Scanline Overlay */}
+      <div className="crt-overlay"></div>
 
-        {/* Main Content */}
-        <div className="content">
-          {/* Music Controls */}
-          <div className="music-controls">
-            <MusicPlayer />
-            <ToggleNextTrack />
-          </div>
+      {/* Background Canvas */}
+      <div className="background-canvas">
+        <Canvas camera={{ position: [0, 0, 50], fov: 75 }}>
+          <Suspense fallback={null}>
+            <BackgroundAnimation />
+          </Suspense>
+        </Canvas>
+      </div>
 
-          {/* Hero Section */}
-          <section className="hero-section">
-            <div className="hero-content">
-              <div className="portrait-container">
+      {/* Navigation Header */}
+      <Navigation />
+
+      {/* Main Content */}
+      <div className="content">
+        {/* Hero Section */}
+        <section id="home" className="hero-section">
+          <div className="hero-content">
+            <div className="hero-images-container">
+              <div className="side-image-container left-image">
                 <img 
-                  src="/me.jpg" 
-                  alt="Portrait" 
-                  className="pixelated-portrait"
+                  src="/left.jpg" 
+                  alt="Left decoration" 
+                  className="side-image"
+                  loading="eager"
                   onError={(e) => {
                     e.target.style.display = 'none'
                   }}
                 />
               </div>
-              <h1 className="hero-title">RETRO PORTFOLIO</h1>
-              <p className="hero-subtitle">MUSIC-REACTIVE 3D EXPERIENCE</p>
+              <div className="portrait-container">
+                <img 
+                  src="/me.jpg" 
+                  alt="Rishi Raj Grandhi" 
+                  className="pixelated-portrait"
+                  loading="eager"
+                  onError={(e) => {
+                    console.error('Image failed to load:', e.target.src)
+                    // Hide broken image and show placeholder
+                    e.target.style.display = 'none'
+                    const container = e.target.parentElement
+                    if (container && !container.querySelector('.portrait-placeholder')) {
+                      const placeholder = document.createElement('div')
+                      placeholder.className = 'portrait-placeholder'
+                      placeholder.innerHTML = 'RG'
+                      container.appendChild(placeholder)
+                    }
+                  }}
+                  onLoad={() => {
+                    console.log('Image loaded successfully')
+                  }}
+                />
+              </div>
+              <div className="side-image-container right-image">
+                <img 
+                  src="/right.jpg" 
+                  alt="Right decoration" 
+                  className="side-image"
+                  loading="eager"
+                  onError={(e) => {
+                    e.target.style.display = 'none'
+                  }}
+                />
+              </div>
             </div>
-          </section>
+            <h1 className="hero-title">RISHI RAJ GRANDHI</h1>
+            <p className="hero-subtitle">SOFTWARE DEVELOPER</p>
+            <p className="hero-description">B.Tech CSE @ VIT | AWS Certified | Full-Stack Developer</p>
+          </div>
+        </section>
 
-          {/* Visualizer Section 1 */}
-          <section className="visualizer-section">
-            <h2 className="section-title">NEON SPHERE</h2>
-            <div className="visualizer-container">
-              <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-                <ambientLight intensity={0.3} />
-                <pointLight position={[10, 10, 10]} intensity={1} />
-                <Suspense fallback={null}>
-                  <SphereVisualizer />
-                </Suspense>
-              </Canvas>
-            </div>
-          </section>
+        {/* About Section */}
+        <About />
 
-          {/* Visualizer Section 2 */}
-          <section className="visualizer-section">
-            <h2 className="section-title">PIXEL CLOUD</h2>
-            <div className="visualizer-container">
-              <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-                <ambientLight intensity={0.5} />
-                <Suspense fallback={null}>
-                  <ParticleVisualizer />
-                </Suspense>
-              </Canvas>
-            </div>
-          </section>
+        {/* Projects Section */}
+        <ProjectGrid />
 
-          {/* Visualizer Section 3 */}
-          <section className="visualizer-section">
-            <h2 className="section-title">EQUALIZER GRID</h2>
-            <div className="visualizer-container">
-              <Canvas camera={{ position: [0, 0, 8], fov: 75 }}>
-                <ambientLight intensity={0.5} />
-                <pointLight position={[0, 5, 5]} intensity={1} />
-                <Suspense fallback={null}>
-                  <BarsVisualizer />
-                </Suspense>
-              </Canvas>
-            </div>
-          </section>
+        {/* Contact Section */}
+        <ContactForm />
 
-          {/* Projects Section */}
-          <ProjectGrid />
-
-          {/* Contact Section */}
-          <ContactForm />
-
-          {/* Social Links */}
-          <SocialLinks />
-        </div>
+        {/* Social Links */}
+        <SocialLinks />
       </div>
-    </AudioProvider>
+    </div>
   )
 }
 

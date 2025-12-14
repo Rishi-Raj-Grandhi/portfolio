@@ -6,7 +6,7 @@ const ProjectGrid = () => {
   const [selectedProject, setSelectedProject] = useState(null)
 
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <h2 className="section-title">PROJECTS</h2>
       <div className="project-grid">
         {projectsData.map((project) => (

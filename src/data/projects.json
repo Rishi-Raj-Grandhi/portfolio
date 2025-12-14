@@ -1,35 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Retro Game Engine",
-    "description": "A pixel-perfect 2D game engine built with WebGL and TypeScript. Features sprite animation, collision detection, and a retro tile-based map system.",
-    "tech": ["TypeScript", "WebGL", "Canvas API", "Node.js"],
-    "github": "https://github.com/username/retro-game-engine",
-    "demo": "https://retro-game-demo.netlify.app"
+    "title": "2D Animation Generator using Agentic AI",
+    "description": "Engineered AI-powered animation platform using Manim and LangGraph to automatically generate educational 2D animations from text prompts. Developed React frontend with scene merging, preview, and video export capabilities, reducing animation creation time by 60%. Optimized for educators and content creators, improving accessibility and workflow efficiency through automation.",
+    "tech": ["Manim", "LangGraph", "React", "Python", "AI/ML"],
+    "github": "https://github.com/Rishi-Raj-Grandhi",
+    "demo": null
   },
   {
     "id": 2,
-    "title": "Neon City Builder",
-    "description": "A voxel-based city builder with retro neon aesthetics. Build and customize your cyberpunk metropolis with procedurally generated buildings.",
-    "tech": ["Three.js", "React", "WebGL", "Procedural Generation"],
-    "github": "https://github.com/username/neon-city-builder",
-    "demo": "https://neon-city.netlify.app"
+    "title": "Smart Pipeline Leak Detection System",
+    "description": "Built machine learning model using Scikit-learn to predict pipeline leak locations and burst size with 95% accuracy. Developed Streamlit web application for real-time leak detection visualization and monitoring dashboard. Led and Won 2nd place at TechBids Hackathon among 50+ teams; published research paper in IEEE 2024.",
+    "tech": ["Python", "Scikit-learn", "Pandas", "Streamlit", "Machine Learning"],
+    "github": "https://github.com/Rishi-Raj-Grandhi",
+    "demo": null
   },
   {
     "id": 3,
-    "title": "Pixel Art Studio",
-    "description": "An online pixel art editor with palette management, animation tools, and export to multiple formats. Perfect for creating retro game sprites.",
-    "tech": ["React", "Canvas API", "IndexedDB", "Web Workers"],
-    "github": "https://github.com/username/pixel-art-studio",
-    "demo": "https://pixel-art-studio.netlify.app"
+    "title": "Serverless Document Processing Pipeline",
+    "description": "Built an end-to-end serverless workflow with API Gateway, Lambda, and S3 for processing user-uploaded documents. Extracted text using Amazon Textract and converted it into structured JSON via LLMs on Amazon Bedrock.",
+    "tech": ["AWS", "Lambda", "API Gateway", "S3", "Textract", "Bedrock", "Serverless"],
+    "github": "https://github.com/Rishi-Raj-Grandhi",
+    "demo": null
   },
   {
     "id": 4,
-    "title": "Synthwave Visualizer",
-    "description": "A music visualizer that generates retro synthwave visuals in real-time. Features multiple visualization modes and customizable color schemes.",
-    "tech": ["Web Audio API", "Three.js", "React", "FFT"],
-    "github": "https://github.com/username/synthwave-visualizer",
-    "demo": "https://synthwave-viz.netlify.app"
+    "title": "AI-Powered Code Review Platform",
+    "description": "The platform supports flexible uploads (files, multiple files, or ZIP projects) and delivers AI-driven code reviews via GPT-4o-mini, classifying issues across 19 categories with three severity levels and generating detailed quality metrics. It includes secure authentication, persistent sessions, full review history, and a modern React interface with visualizations, while providing compatibility with 20+ programming languages and frameworks.",
+    "tech": ["FastAPI", "LangGraph", "React", "GPT-4o-mini", "Python", "Authentication", "AI/ML"],
+    "github": "https://github.com/Rishi-Raj-Grandhi",
+    "demo": null
+  },
+  {
+    "id": 5,
+    "title": "Document Author - AI-Powered Document Generation & Refinement Platform",
+    "description": "The platform provides AI-powered Word and PowerPoint generation with outline suggestions and section-level refinement, supported by automatic version control and project-based organization. It features secure Supabase authentication, document export to .docx/.pptx, a feedback system for section-level comments and ratings, and real-time updates for smooth project and version switching.",
+    "tech": ["React", "Supabase", "AI/ML", "Python", "FastAPI", "Version Control", ".docx/.pptx"],
+    "github": "https://github.com/Rishi-Raj-Grandhi",
+    "demo": "https://document-author.vercel.app/"
   }
 ]
-
