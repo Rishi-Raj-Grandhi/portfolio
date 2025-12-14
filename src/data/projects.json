@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Retro Game Engine",
+    "description": "A pixel-perfect 2D game engine built with WebGL and TypeScript. Features sprite animation, collision detection, and a retro tile-based map system.",
+    "tech": ["TypeScript", "WebGL", "Canvas API", "Node.js"],
+    "github": "https://github.com/username/retro-game-engine",
+    "demo": "https://retro-game-demo.netlify.app"
+  },
+  {
+    "id": 2,
+    "title": "Neon City Builder",
+    "description": "A voxel-based city builder with retro neon aesthetics. Build and customize your cyberpunk metropolis with procedurally generated buildings.",
+    "tech": ["Three.js", "React", "WebGL", "Procedural Generation"],
+    "github": "https://github.com/username/neon-city-builder",
+    "demo": "https://neon-city.netlify.app"
+  },
+  {
+    "id": 3,
+    "title": "Pixel Art Studio",
+    "description": "An online pixel art editor with palette management, animation tools, and export to multiple formats. Perfect for creating retro game sprites.",
+    "tech": ["React", "Canvas API", "IndexedDB", "Web Workers"],
+    "github": "https://github.com/username/pixel-art-studio",
+    "demo": "https://pixel-art-studio.netlify.app"
+  },
+  {
+    "id": 4,
+    "title": "Synthwave Visualizer",
+    "description": "A music visualizer that generates retro synthwave visuals in real-time. Features multiple visualization modes and customizable color schemes.",
+    "tech": ["Web Audio API", "Three.js", "React", "FFT"],
+    "github": "https://github.com/username/synthwave-visualizer",
+    "demo": "https://synthwave-viz.netlify.app"
+  }
+]
+
