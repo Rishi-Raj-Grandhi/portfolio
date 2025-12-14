@@ -7,6 +7,11 @@ import ProjectGrid from './components/ProjectGrid'
 import ContactForm from './components/ContactForm'
 import SocialLinks from './components/SocialLinks'
 
+// ✅ IMPORT IMAGES (Vite-safe)
+import leftImg from './assets/left.jpg'
+import meImg from './assets/me.jpg'
+import rightImg from './assets/right.jpg'
+
 function App() {
   return (
     <div className="app">
@@ -31,10 +36,12 @@ function App() {
         <section id="home" className="hero-section">
           <div className="hero-content">
             <div className="hero-images-container">
+              
+              {/* Left Image */}
               <div className="side-image-container left-image">
-                <img 
-                  src="/left.jpg" 
-                  alt="Left decoration" 
+                <img
+                  src={leftImg}
+                  alt="Left decoration"
                   className="side-image"
                   loading="eager"
                   onError={(e) => {
@@ -42,16 +49,18 @@ function App() {
                   }}
                 />
               </div>
+
+              {/* Center Portrait */}
               <div className="portrait-container">
-                <img 
-                  src="/me.jpg" 
-                  alt="Rishi Raj Grandhi" 
+                <img
+                  src={meImg}
+                  alt="Rishi Raj Grandhi"
                   className="pixelated-portrait"
                   loading="eager"
                   onError={(e) => {
                     console.error('Image failed to load:', e.target.src)
-                    // Hide broken image and show placeholder
                     e.target.style.display = 'none'
+
                     const container = e.target.parentElement
                     if (container && !container.querySelector('.portrait-placeholder')) {
                       const placeholder = document.createElement('div')
@@ -65,10 +74,12 @@ function App() {
                   }}
                 />
               </div>
+
+              {/* Right Image */}
               <div className="side-image-container right-image">
-                <img 
-                  src="/right.jpg" 
-                  alt="Right decoration" 
+                <img
+                  src={rightImg}
+                  alt="Right decoration"
                   className="side-image"
                   loading="eager"
                   onError={(e) => {
@@ -76,10 +87,14 @@ function App() {
                   }}
                 />
               </div>
+
             </div>
+
             <h1 className="hero-title">RISHI RAJ GRANDHI</h1>
             <p className="hero-subtitle">SOFTWARE DEVELOPER</p>
-            <p className="hero-description">B.Tech CSE @ VIT | AWS Certified | Full-Stack Developer</p>
+            <p className="hero-description">
+              B.Tech CSE @ VIT | AWS Certified | Full-Stack Developer
+            </p>
           </div>
         </section>
 
@@ -100,4 +115,3 @@ function App() {
 }
 
 export default App
-
